@@ -16,8 +16,6 @@ input.forEach(element => {
   reportIsSafe = true;
   report = element.split(" ");
 
-  // console.log(report);
-
   // determine increase or decrease
   increase = false;
   firstLevel = report.shift();
@@ -27,8 +25,6 @@ input.forEach(element => {
   if (difference > 0) {
     increase = true;
   }
-
-  // console.log("increase", increase);
 
   // determine if steps are ok
   while (secondLevel !== undefined && reportIsSafe === true) {
@@ -45,8 +41,6 @@ input.forEach(element => {
     firstLevel = secondLevel;
     secondLevel = report.shift();
   }
-
-  // console.log("report is safe", reportIsSafe);
 
   if (reportIsSafe) {
     numberOfSafeReports++;

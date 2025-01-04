@@ -16,8 +16,6 @@ let numberOfSafeReports = 0;
 function reportIsSafe(report) {
   let isSafe = true;
 
-  // console.log(report);
-
   // determine increase or decrease
   let increase = false;
   let firstLevel = report.shift();
@@ -44,7 +42,6 @@ function reportIsSafe(report) {
     secondLevel = report.shift();
   }
 
-  // console.log("report is safe", isSafe);
   return isSafe;
 }
 
@@ -66,8 +63,6 @@ function reportIsSafeWithDampener(report) {
 
 input.forEach(element => {
   const report = element.split(" ");
-
-  // console.log(report);
 
   if (reportIsSafeWithDampener(report)) {
     numberOfSafeReports++;
